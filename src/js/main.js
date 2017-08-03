@@ -22,9 +22,10 @@ let Calculator = function(values){
   function countProductsPrice(){
     let price = 0
     for(let value of values.dbElements){
-      price += value.price;
+      price += parseFloat(value.price);
     }
     return price;
+    price =0;
       // console.log(values.dbElements[0].price);
 
   }
@@ -116,7 +117,7 @@ let checkPrice = function(value){
 }
 
 let checkName = function(value){
-  var reg = /^[A-Za-z\s]{2,}$/;
+  var reg = /^[A-Za-ząśćźżłó\s]{2,}$/;
   return reg.test(value);
 }
 //Clear errors
