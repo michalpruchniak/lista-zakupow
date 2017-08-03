@@ -19,7 +19,15 @@ let Calculator = function(values){
         values.countElements.innerHTML = values.dbElements.length;
     }
   }
+  function countProductsPrice(){
+    let price = 0
+    for(let value of values.dbElements){
+      price += value.price;
+    }
+    return price;
+      // console.log(values.dbElements[0].price);
 
+  }
   //Display values
   function displayValues(){
     let ol = null;
@@ -59,6 +67,7 @@ let Calculator = function(values){
       });
 
   countElements();
+  console.log(countProductsPrice());
 
   }
   (function(){
@@ -77,9 +86,14 @@ var myArray={
   mainContainer: document.querySelector('.container'),
   countElements: document.querySelector('.count'),
   dbElements: [{
-    product: 'Monika',
-    price: 25
-  }]
+    product: 'Chipsy',
+    price: 3
+  },
+  {
+    product: 'Cola',
+    price: 3.25
+  }
+]
 }
 var o = new Calculator(myArray);
 
