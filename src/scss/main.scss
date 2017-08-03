@@ -1,0 +1,32 @@
+body{
+  background-color: #53C387;
+}
+.container{
+  min-height: 100px;
+  width: 100%;
+  background-color: #E3E5E1;
+  ul{
+    box-sizing: border-box;
+    display: flex;
+    font-size: 40px;
+    background-color: #A1434B;
+    width: 30vw;
+    li{
+      text-align: center;
+      list-style-type: none;
+      padding: 15px;
+      color: #6EBE9F;
+    }
+  }
+  @supports(display: grid){
+    ul{
+      display: grid;
+      font-size: 40px;
+      grid-template-columns: 40% 30% auto;
+    }
+  }
+
+}
+.delElement::after{
+  content: '[del]';
+}
