@@ -10,15 +10,21 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-    <div class="container">
-
-    </div>
-    <div class="count"></div>
-      <span class="product_error"></span>
-      <input type="text" name="name" id="product" placeholder="Produkt"></input>
+    <div class="mainContainer">
+     <div class="form">
+     <span class="product_error"></span>
+      <input type="text" name="name" id="product" placeholder="Produkt">
       <span class="price_error"></span>
-      <input type="number" name="age" id="price" placeholder="Cena"></input>
+      <input type="number" name="age" id="price" placeholder="Cena">
       <button>Wyślij</button>
+     </div>
+    <div class="results">
+    <span class="results-title">Liczba produktów:</span> <span class="count"></span>
+    <span class="results-title">Ostateczna cena:</span> <span class="productsPrice"></span>
+    </div>
+    <div class="container">
+    </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <script src="js/main.js"></script>

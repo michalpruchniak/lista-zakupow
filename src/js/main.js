@@ -24,9 +24,10 @@ let Calculator = function(values){
     for(let value of values.dbElements){
       price += parseFloat(value.price);
     }
-    return price;
-    price =0;
-      // console.log(values.dbElements[0].price);
+
+    if(values.countProductPrice){
+        values.countProductPrice.innerHTML = price;
+    }
 
   }
   //Display values
@@ -68,7 +69,7 @@ let Calculator = function(values){
       });
 
   countElements();
-  console.log(countProductsPrice());
+  countProductsPrice();
 
   }
   (function(){
@@ -86,6 +87,7 @@ var mainContainer = document.querySelector('.container');
 var myArray={
   mainContainer: document.querySelector('.container'),
   countElements: document.querySelector('.count'),
+  countProductPrice: document.querySelector('.productsPrice'),
   dbElements: [{
     product: 'Chipsy',
     price: 3
@@ -100,7 +102,7 @@ var o = new Calculator(myArray);
 
 let callbackArray = function(){
   let x = {product: document.getElementById("product").value,
-           price: document.getElementById("price").value};
+           price: document.getElementById("price").value,};
   o.newElement(x);
   document.getElementById("product").value ="";
   document.getElementById("price").value ="";
@@ -108,12 +110,17 @@ let callbackArray = function(){
 
 //Check price
 let checkPrice = function(value){
+    flag = true;
   let reg = /^\d{1,4}(\.\d{0,2})?$/;
-  if(reg.test(value)) {
-      return true;
-  } else {
-    return false
-  }
+    
+  if(!reg.test(value)) {
+      flag = false
+  } 
+    
+    if(value < 0.2){
+      flag = false;
+    }
+    return flag;
 }
 
 let checkName = function(value){
@@ -133,7 +140,7 @@ document.querySelector('button').addEventListener('click', function(){
     document.querySelector('.price_error').innerHTML="Błąd. Niewidłowa cena";
   }
   if(!check_product){
-    document.querySelector('.product_error').innerHTML="Błąd. Niewidłowe imię";
+    document.querySelector('.product_error').innerHTML="Błąd. Niewidłowe nazwa produktu";
   }
   if(check_price && check_product){
     callbackArray();

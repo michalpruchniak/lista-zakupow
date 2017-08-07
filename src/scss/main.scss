@@ -1,32 +1,72 @@
 body{
-  background-color: #53C387;
+    background-color: #E4E6B8;
 }
-.container{
-  min-height: 100px;
-  width: 100%;
-  background-color: #E3E5E1;
-  ul{
-    box-sizing: border-box;
+.mainContainer{
     display: flex;
-    font-size: 40px;
-    background-color: #A1434B;
-    width: 30vw;
-    li{
-      text-align: center;
-      list-style-type: none;
-      padding: 15px;
-      color: #6EBE9F;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    .container{
+        width: 90%;
+        min-height: 50px;
+        font-size: 23px;
+        line-height: 28px;
+        text-align: center;
+        background-color: #D2C777;
+        color: #404040;
+        padding: 10px;
+        ul{
+            display: flex;
+            list-style-type: none;
+            &>li{
+                display: block;
+                &:nth-of-type(1){
+                    width: 50%;
+                }
+                &:nth-of-type(2){
+                    width: 30%;
+                }
+                 &:nth-of-type(3){
+                    width: 20%;
+                }
+            }
+        }
     }
-  }
-  @supports(display: grid){
-    ul{
-      display: grid;
-      font-size: 40px;
-      grid-template-columns: 40% 30% auto;
+    .results{
+        margin-bottom: 20px;
     }
-  }
+    .results-title{
+        font-weight: bold;
+    }
+    .count, .productsPrice{
+        font-size: 18px;
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    input, button{
+        margin-top: 8px;
+        height: 25px;
+    }
+    button{
+        margin-bottom: 15px;
+    }
+    product_error, price_error{
+        display: block;
+    }
 
 }
-.delElement::after{
-  content: '[del]';
+
+@media (min-width: 1200px){
+
+    .mainContainer{
+        .container{
+            width: 40%;
+        }        
+    }
+
+   .form{
+        flex-direction: row;
+    }
 }
