@@ -1,7 +1,7 @@
 body{
     background-color: #E4E6B8;
 }
-.mainContainer{
+.main_container{
     display: flex;
     width: 100vw;
     flex-direction: column;
@@ -35,10 +35,10 @@ body{
     .results{
         margin-bottom: 20px;
     }
-    .results-title{
+    .results_title{
         font-weight: bold;
     }
-    .count, .productsPrice{
+    .count, .products_price{
         font-size: 18px;
     }
 }
@@ -60,7 +60,7 @@ body{
 
 @media (min-width: 1200px){
 
-    .mainContainer{
+    .main_container{
         .container{
             width: 40%;
         }        

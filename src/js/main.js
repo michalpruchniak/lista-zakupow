@@ -87,7 +87,7 @@ var mainContainer = document.querySelector('.container');
 var myArray={
   mainContainer: document.querySelector('.container'),
   countElements: document.querySelector('.count'),
-  countProductPrice: document.querySelector('.productsPrice'),
+  countProductPrice: document.querySelector('.products_price'),
   dbElements: [{
     product: 'Chipsy',
     price: 3
@@ -140,7 +140,7 @@ document.querySelector('button').addEventListener('click', function(){
     document.querySelector('.price_error').innerHTML="Błąd. Niewidłowa cena";
   }
   if(!check_product){
-    document.querySelector('.product_error').innerHTML="Błąd. Niewidłowe nazwa produktu";
+    document.querySelector('.product_error').innerHTML="Błąd. Niewidłowa nazwa produktu";
   }
   if(check_price && check_product){
     callbackArray();

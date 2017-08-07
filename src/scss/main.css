@@ -3,13 +3,13 @@ body {
   background-color: #E4E6B8; }
 
 /* line 4, /home/michal/Pulpit/js/src/scss/main.scss */
-.mainContainer {
+.main_container {
   display: flex;
   width: 100vw;
   flex-direction: column;
   align-items: center; }
   /* line 9, /home/michal/Pulpit/js/src/scss/main.scss */
-  .mainContainer .container {
+  .main_container .container {
     width: 90%;
     min-height: 50px;
     font-size: 23px;
@@ -19,29 +19,29 @@ body {
     color: #404040;
     padding: 10px; }
     /* line 18, /home/michal/Pulpit/js/src/scss/main.scss */
-    .mainContainer .container ul {
+    .main_container .container ul {
       display: flex;
       list-style-type: none; }
       /* line 21, /home/michal/Pulpit/js/src/scss/main.scss */
-      .mainContainer .container ul > li {
+      .main_container .container ul > li {
         display: block; }
         /* line 23, /home/michal/Pulpit/js/src/scss/main.scss */
-        .mainContainer .container ul > li:nth-of-type(1) {
+        .main_container .container ul > li:nth-of-type(1) {
           width: 50%; }
         /* line 26, /home/michal/Pulpit/js/src/scss/main.scss */
-        .mainContainer .container ul > li:nth-of-type(2) {
+        .main_container .container ul > li:nth-of-type(2) {
           width: 30%; }
         /* line 29, /home/michal/Pulpit/js/src/scss/main.scss */
-        .mainContainer .container ul > li:nth-of-type(3) {
+        .main_container .container ul > li:nth-of-type(3) {
           width: 20%; }
   /* line 35, /home/michal/Pulpit/js/src/scss/main.scss */
-  .mainContainer .results {
+  .main_container .results {
     margin-bottom: 20px; }
   /* line 38, /home/michal/Pulpit/js/src/scss/main.scss */
-  .mainContainer .results-title {
+  .main_container .results_title {
     font-weight: bold; }
   /* line 41, /home/michal/Pulpit/js/src/scss/main.scss */
-  .mainContainer .count, .mainContainer .productsPrice {
+  .main_container .count, .main_container .products_price {
     font-size: 18px; }
 
 /* line 45, /home/michal/Pulpit/js/src/scss/main.scss */
@@ -61,7 +61,7 @@ body {
 
 @media (min-width: 1200px) {
   /* line 64, /home/michal/Pulpit/js/src/scss/main.scss */
-  .mainContainer .container {
+  .main_container .container {
     width: 40%; }
   /* line 69, /home/michal/Pulpit/js/src/scss/main.scss */
   .form {
